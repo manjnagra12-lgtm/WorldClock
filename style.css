@@ -1,7 +1,9 @@
+/* Use predictable sizing for every element. */
 * {
 	box-sizing: border-box;
 }
 
+/* Set the page colors and create a full-height vertical layout. */
 body {
 	margin: 0;
 	min-height: 100vh;
@@ -11,11 +13,13 @@ body {
 	flex-direction: column;
 }
 
+/* Keep the header stretched across the viewport. */
 header {
 	width: 100%;
 	box-sizing: border-box;
 }
 
+/* Center the title, globe, and search controls in the available page space. */
 .globe-stage {
 	flex: 1;
 	display: flex;
@@ -27,11 +31,13 @@ header {
 	padding: 24px;
 }
 
+/* Position the time label relative to the globe image. */
 .globe-container {
 	width: min(58vw, 360px);
 	position: relative;
 	}
 
+/* Make the Earth image circular, responsive, and softly elevated. */
 .globe-image {
 	display: block;
 	width: 100%;
@@ -44,10 +50,12 @@ header {
 	transition: transform 0.3s ease;
 }
 
+/* Add a small rotation and scale effect when the globe is hovered. */
 .globe-container:hover .globe-image {
 	transform: rotate(4deg) scale(1.03);
 }
 
+/* Place the selected city's time badge over the center of the globe. */
 .globe-time {
 	position: absolute;
 	top: 50%;
@@ -68,20 +76,24 @@ header {
 	transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+/* Reveal the time badge only after a city has been found. */
 .globe-time:not(:empty) {
 	opacity: 1;
 }
 
+/* Lift the visible time badge slightly while the globe is hovered. */
 .globe-container:hover .globe-time:not(:empty) {
 	transform: translate(-50%, calc(-50% - 6px));
 }
 
+/* Limit the search form width and align its contents. */
 .city-form {
 	width: min(100%, 420px);
 	margin-top: 20px;
 	text-align: center;
 }
 
+/* Keep the form label visible above the input controls. */
 .city-form label {
 	display: block;
 	margin-bottom: 8px;
@@ -89,11 +101,13 @@ header {
 	font-weight: 600;
 }
 
+/* Place the search input and button side by side on larger screens. */
 .city-input-row {
 	display: flex;
 	gap: 8px;
 }
 
+/* Share the basic control dimensions and typography. */
 .city-input-row input,
 .city-input-row button {
 	min-height: 44px;
@@ -102,6 +116,7 @@ header {
 	font: inherit;
 }
 
+/* Style the city search field. */
 .city-input-row input {
 	min-width: 0;
 	flex: 1;
@@ -110,6 +125,7 @@ header {
 	color: #0d2b45;
 }
 
+/* Style the search action button. */
 .city-input-row button {
 	padding: 0 18px;
 	background: #2f8f83;
@@ -119,12 +135,14 @@ header {
 	transition: background 0.2s ease, transform 0.2s ease;
 }
 
+/* Give the search button feedback on hover and keyboard focus. */
 .city-input-row button:hover,
 .city-input-row button:focus-visible {
 	background: #24776e;
 	transform: translateY(-2px);
 }
 
+/* Reserve space for API status and search results. */
 .city-result {
 	min-height: 1.25em;
 	margin: 10px 0 0;
@@ -132,6 +150,7 @@ header {
 	font-size: 0.85rem;
 }
 
+/* Style the full-width introductory banner. */
 .banner {
 	margin: 0;
 	padding: 12px 16px;
@@ -144,6 +163,7 @@ header {
 	line-height: 1.4;
 }
 
+/* Style the centered, interactive page title. */
 h1 {
 	display: block;
 	width: 100%;
@@ -157,16 +177,19 @@ h1 {
 	transition: color 0.2s ease, transform 0.2s ease;
 }
 
+/* Highlight the title when the pointer is over it. */
 h1:hover {
 	color: #7de2d1;
 	transform: translateY(-4px) scale(1.03);
 }
 
+/* Make keyboard focus visible on the title. */
 h1:focus-visible {
 	outline: 2px solid #7de2d1;
 	outline-offset: 4px;
 }
 
+/* Separate and center the social footer at the bottom of the page. */
 footer {
 	width: 100%;
 	margin-top: auto;
@@ -175,17 +198,20 @@ footer {
 	text-align: center;
 }
 
+/* Add spacing and readable text to the footer label. */
 footer p {
 	margin: 0 0 16px;
 	font-size: 0.9rem;
 }
 
+/* Arrange social icons in a centered row. */
 .social-links {
 	display: flex;
 	justify-content: center;
 	gap: 20px;
 }
 
+/* Create accessible touch targets for each social icon. */
 .social-links a {
 	display: inline-flex;
 	align-items: center;
@@ -197,12 +223,14 @@ footer p {
 	transition: color 0.2s ease, transform 0.2s ease;
 }
 
+/* Highlight social links on hover and keyboard focus. */
 .social-links a:hover,
 .social-links a:focus-visible {
 	color: #7de2d1;
 	transform: translateY(-2px);
 }
 
+/* Adjust spacing and controls for smaller phone screens. */
 @media (max-width: 480px) {
 	.banner {
 		padding: 10px 14px;

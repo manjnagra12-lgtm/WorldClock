@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<!-- Define the document metadata and external stylesheets. -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>World Clock</title>
@@ -8,16 +9,22 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+	<!-- Display the introductory message at the top of the page. -->
 	<header>
 		<p class="banner">You have all the time in the world!</p>
 	</header>
 
+	<!-- Main interactive area containing the title, globe, and city search. -->
 	<main class="globe-stage">
+		<!-- Clicking or keyboard-activating the title refreshes the page. -->
 		<h1 id="page-title" role="button" tabindex="0" aria-label="Refresh the page">World Clock</h1>
 		<div class="globe-container">
+			<!-- Local Earth image used as the visual centerpiece. -->
 			<img class="globe-image" src="assets/images/earth.jpg" alt="The Earth viewed from space">
+			<!-- The selected city's current time is shown over the globe after a search. -->
 			<p class="globe-time" id="globe-time" aria-live="polite"></p>
 		</div>
+		<!-- Search form for finding a city's timezone and current time. -->
 		<form class="city-form" id="city-form">
 			<label for="city-input">Find a city</label>
 			<div class="city-input-row">
@@ -28,6 +35,7 @@
 		</form>
 	</main>
 
+	<!-- Footer with links to the World Clock social profiles. -->
 	<footer>
 		<p>Connect with World Clock</p>
 		<nav class="social-links" aria-label="Social media links">
@@ -37,6 +45,7 @@
 		</nav>
 	</footer>
 
+	<!-- Load page interactions after the page markup is available. -->
 	<script src="js.js"></script>
 </body>
 </html>
