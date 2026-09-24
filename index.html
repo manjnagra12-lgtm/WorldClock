@@ -14,7 +14,10 @@
 
 	<main class="globe-stage">
 		<h1 id="page-title" role="button" tabindex="0" aria-label="Refresh the page">World Clock</h1>
-		<img class="globe-image" src="assets/images/earth.jpg" alt="The Earth viewed from space">
+		<div class="globe-container">
+			<img class="globe-image" src="assets/images/earth.jpg" alt="The Earth viewed from space">
+			<p class="globe-time" id="globe-time" aria-live="polite"></p>
+		</div>
 		<form class="city-form" id="city-form">
 			<label for="city-input">Find a city</label>
 			<div class="city-input-row">
